@@ -1,0 +1,86 @@
+perp A B C D, perp C D E F, ncoll A B E => para A B E F
+如果两条直线都垂直于同一条直线，那么这两条直线平行
+cong O A O B, cong O B O C, cong O C O D => cyclic A B C D
+如果一个点到一个四边形的四个顶点的距离相等，那么这个四边形的四个顶点共圆.
+eqangle A B P Q C D P Q => para A B C D
+如果两条直线被第三条直线所截，且内错角相等，那么这两条直线平行.
+cyclic A B P Q => eqangle P A P B Q A Q B
+在同一个圆中，同弧或等弧所对的圆周角相等.
+eqangle6 P A P B Q A Q B, ncoll P Q A B => cyclic A B P Q
+如果两个角相等，并且它们的顶点在同一条直线上，那么这两个角的顶点和它们的边的交点共圆.【定理4的逆定理】
+cyclic A B C P Q R, eqangle C A C B R P R Q => cong A B P Q
+在同一个圆中，如果两个圆周角相等，那么它们所对的弦相等
+midp E A B, midp F A C => para E F B C
+三角形的中位线平行于第三边【中位线定理】
+para A B C D, coll O A C, coll O B D => eqratio3 A B C D O O
+如果两条平行线被两条相交线所截，那么所形成的对应线段的比相等【平行线分线段成比例定理】
+perp A B C D, perp E F G H, npara A B E F => eqangle A B E F C D G H
+如果两条直线分别垂直于另外两条直线，且这两条直线不平行，那么它们的夹角相等.【垂直线的夹角性质】
+eqangle a b c d m n p q, eqangle c d e f p q r u => eqangle a b e f m n r u
+如果两对直线的夹角分别相等，那么这两对直线的夹角具有传递性.【夹角的传递性】
+eqratio a b c d m n p q, eqratio c d e f p q r u => eqratio a b e f m n r u
+如果两个比例相等，且它们的中间项也相等，那么可以通过比例的传递性来证明其他比例的相等关系.【比例的传递性】
+eqratio6 d b d c a b a c, coll d b c, ncoll a b c => eqangle6 a b a d a d a c
+如果一个点到三角形两边的比等于这两边的比，那么这个点在角平分线上。【角平分线的逆定理】
+eqangle6 a b a d a d a c, coll d b c, ncoll a b c => eqratio6 d b d c a b a c
+如果一个点在角平分线上，那么这个点到三角形两边的比等于这两边的比.【角平分线定理的推论】
+cong O A O B, ncoll O A B => eqangle O A A B A B O B
+在等腰三角形中，底角相等。【等腰三角形的基本性质之一】
+eqangle6 A O A B B A B O, ncoll O A B => cong O A O B
+如果一个三角形的两个角相等，那么这个三角形是等腰三角形。【等腰三角形的判定定理】
+circle O A B C, perp O A A X => eqangle A X A B C A C B
+如果O是三角形ABC的外接圆的圆心，且OA垂直于AX，那么∠BAX = ∠BCA。【圆周角定理的推论】
+circle O A B C, eqangle A X A B C A C B => perp O A A X
+如果O是三角形ABC的外接圆的圆心且∠BAX = ∠BCA，那么OA垂直于AX。【定理16的逆定理】
+circle O A B C, midp M B C => eqangle A B A C O B O M
+如果O是三角形ABC的外接圆的圆心且M是BC的中点，那么∠BAC = ∠BOM。
+circle O A B C, coll M B C, eqangle A B A C O B O M => midp M B C
+如果O是三角形ABC的外接圆的圆心，M、B、C共线，且∠BAC = ∠BOM，那么M是BC的中点。【定理18的逆定理】
+perp A B B C, midp M A C => cong A M B M
+在直角三角形中，斜边的中线等于斜边的一半。【直角三角形斜边中线性质】
+circle O A B C, coll O A C => perp A B B C
+在圆中，直径所对的圆周角是直角。【圆周角定理之一】
+cyclic A B C D, para A B C D => eqangle A D C D C D C B
+若ABCD共圆，且AB平行CD，则∠ADC = ∠BCD【圆内接四边形的对角互补性质+平行线性质】
+midp M A B, perp O M A B => cong O A O B
+垂直平分线上的点到线段两端的距离相等。【垂直平分线的性质】
+cong A P B P, cong A Q B Q => perp A B P Q
+如果一个点到线段两端的距离相等，那么这个点在线段的垂直平分线上。【垂直平分线逆定理】
+cong A P B P, cong A Q B Q, cyclic A B P Q => perp P A A Q
+若AP = BP，AQ = BQ，且ABPQ共圆，则PA垂直AQ【圆内接四边形的性质+垂直平分线的性质】
+midp M A B, midp M C D => para A C B D
+若M是AB的中点，且M也是CD的中点，那么AC平行于BD
+midp M A B, para A C B D, para A D B C => midp M C D
+在平行四边形中，对角线互相平分。【平行四边形对角线性质】
+eqratio O A A C O B B D, coll O A C, coll O B D, ncoll A B C, sameside A O C B O D => para A B C D
+若OA:AC = OB:BD，且O、A、C共线，O、B、D共线，A、B、C不共线，且A、O、C和B、O、D在同侧，则AB平行于CD【平行线分线段成比例定理+逆定理】
+para A B A C => coll A B C
+如果两条直线平行，那么它们没有公共点，除非它们是同一条直线。【平行线的性质】
+midp M A B, midp N C D => eqratio M A A B N C C D
+如果一个点是线段的中点，那么这个点将线段分成两个相等的部分。【中点的性质】
+eqangle A B P Q C D U V, perp P Q U V => perp A B C D
+若AB与PQ的夹角和CD与UV的夹角一致，且PQ垂直UV，则AB垂直CD
+eqratio A B P Q C D U V, cong P Q U V => cong A B C D
+如果两个比例相等，且其中一对线段相等，那么另一对线段也相等。【比例的性质】
+cong A B P Q, cong B C Q R, cong C A R P, ncoll A B C => contri* A B C P Q R
+如果两个三角形的三边对应相等，那么这两个三角形全等.【全等三角形的判定定理】
+cong A B P Q, cong B C Q R, eqangle6 B A B C Q P Q R, ncoll A B C => contri* A B C P Q R
+如果两个三角形的两边和夹角对应相等，那么这两个三角形全等.【全等三角形的判定定理】
+eqangle6 B A B C Q P Q R, eqangle6 C A C B R P R Q, ncoll A B C => simtri A B C P Q R
+如果两个三角形的两角对应相等，那么这两个三角形相似.【相似三角形的判定定理】
+eqangle6 B A B C Q R Q P, eqangle6 C A C B R Q R P, ncoll A B C => simtri2 A B C P Q R
+如果两个三角形的两角对应相等，那么这两个三角形相似.【相似三角形的判定定理】
+eqangle6 B A B C Q P Q R, eqangle6 C A C B R P R Q, ncoll A B C, cong A B P Q => contri A B C P Q R
+如果两个三角形的两角和夹边对应相等，那么这两个三角形全等.【全等三角形的判定定理】
+eqangle6 B A B C Q R Q P, eqangle6 C A C B R Q R P, ncoll A B C, cong A B P Q => contri2 A B C P Q R
+如果两个三角形的两角和夹边以外的一个边对应相等，那么这两个三角形全等。
+eqratio6 B A B C Q P Q R, eqratio6 C A C B R P R Q, ncoll A B C => simtri* A B C P Q R
+如果两个三角形的两边对应成比例，且夹角相等，那么这两个三角形相似.【相似三角形的判定定理】
+eqratio6 B A B C Q P Q R, eqangle6 B A B C Q P Q R, ncoll A B C => simtri* A B C P Q R
+如果两个三角形的两边对应成比例，且夹角相等，那么这两个三角形相似.【相似三角形的判定定理】
+eqratio6 B A B C Q P Q R, eqratio6 C A C B R P R Q, ncoll A B C, cong A B P Q => contri* A B C P Q R
+如果线段BA:BC = QP:QR且CA:CB = RP:RQ，且A、B、C不共线，且AB = PQ，那么三角形ABC和三角形PQR是全等的【相似三角形的性质+全等三角形的判定定理】
+para A B C D, coll M A D, coll N B C, eqratio6 M A M D N B N C, sameside M A D N B C => para M N A B
+如果AB平行于CD，M、A、D共线，N、B、C共线，MA:MD = NB:NC，且M、A、D和N、B、C在同侧，那么MN平行于AB。【平行线分线段成比例定理+逆定理】
+para A B C D, coll M A D, coll N B C, para M N A B => eqratio6 M A M D N B N C
+如果AB平行于CD，M、A、D共线，N、B、C共线，且MN平行于AB，那么MA:MD = NB:NC。

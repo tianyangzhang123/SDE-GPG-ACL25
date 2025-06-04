@@ -1,0 +1,475 @@
+angle_bisector x a b c
+x : a b c x
+a b c = ncoll a b c
+x : eqangle b a b x b x b c
+bisect a b c
+构造点X在角平分线∠ABC上
+
+angle_mirror x a b c
+x : a b c x
+a b c = ncoll a b c
+x : eqangle b a b c b c b x
+amirror a b c
+构造点X使得BC是角平分线∠ABX的中线
+
+circle x a b c
+x : a b c
+a b c = ncoll a b c
+x : cong x a x b, cong x b x c
+bline a b, bline a c
+将点X作为A、B、C的外接圆中心
+
+circumcenter x a b c
+x : a b c
+a b c = ncoll a b c
+x : cong x a x b, cong x b x c
+bline a b, bline a c
+将点X作为A、B、C的外接圆中心
+
+eq_quadrangle a b c d
+d : a b c d
+ =
+a : ; b : ; c : ; d : cong d a b c
+eq_quadrangle
+构造四边形ABCD，使AD=BC
+
+eq_trapezoid a b c d
+d : a b c
+ =
+a : ; b : ; c : ; d : para d c a b, cong d a b c
+eq_trapezoid
+构造梯形ABCD，使AD=BC
+
+eq_triangle x b c
+x : b c
+b c = diff b c
+x : cong x b b c, cong b c c x; eqangle b x b c c b c x, eqangle x c x b b x b c
+circle b b c, circle c b c
+构造X使得XBC为等边三角形
+
+eqangle2 x a b c
+x : a b c x
+a b c = ncoll a b c
+x : eqangle a b a x c x c b
+eqangle2 a b c
+构造X使得∠BAX=∠XCB
+
+eqdia_quadrangle a b c d
+d : a b c d
+ =
+a : ; b : ; c : ; d : cong d b a c
+eqdia_quadrangle
+构造四边形ABCD，使AC=BD
+
+eqdistance x a b c
+x : a b c x
+a b c = diff b c
+x : cong x a b c
+circle a b c
+构造X使得AX=BC
+
+foot x a b c
+x : a b c
+a b c = ncoll a b c
+x : perp x a b c, coll x b c
+tline a b c, line b c
+将点X作为A在BC上的垂足
+
+free a
+a : a
+ =
+a :
+free
+构造一个自由点X
+
+incenter x a b c
+x : a b c
+a b c = ncoll a b c
+x : eqangle a b a x a x a c, eqangle c a c x c x c b; eqangle b c b x b x b a
+bisect a b c, bisect b c a
+将点X作为ABC的内心
+
+incenter2 x y z i a b c
+i : a b c, x : i b c, y : i c a, z : i a b
+a b c = ncoll a b c
+i : eqangle a b a i a i a c, eqangle c a c i c i c b; eqangle b c b i b i b a; x : coll x b c, perp i x b c; y : coll y c a, perp i y c a; z : coll z a b, perp i z a b; cong i x i y, cong i y i z
+incenter2 a b c
+将I作为ABC的内心，并且与X、Y、Z相切
+
+excenter x a b c
+x : a b c
+a b c = ncoll a b c
+x : eqangle a b a x a x a c, eqangle c a c x c x c b; eqangle b c b x b x b a
+bisect b a c, exbisect b c a
+将点X作为ABC的外心
+
+excenter2 x y z i a b c
+i : a b c, x : i b c, y : i c a, z : i a b
+a b c = ncoll a b c
+i : eqangle a b a i a i a c, eqangle c a c i c i c b; eqangle b c b i b i b a; x : coll x b c, perp i x b c; y : coll y c a, perp i y c a; z : coll z a b, perp i z a b; cong i x i y, cong i y i z
+excenter2 a b c
+将点X作为ABC的外心，并且与X、Y、Z相切
+
+centroid x y z i a b c
+x : b c, y : c a, z : a b, i : a x b y
+a b c = ncoll a b c
+x : coll x b c, cong x b x c; y : coll y c a, cong y c y a; z : coll z a b, cong z a z b; i : coll a x i, coll b y i; coll c z i
+centroid a b c
+将点I作为ABC的重心，AI,BI,CI分别和BC,AC,AB相交于点X,Y,Z
+
+ninepoints x y z i a b c
+x : b c, y : c a, z : a b, i : x y z
+a b c = ncoll a b c
+x : coll x b c, cong x b x c; y : coll y c a, cong y c y a; z : coll z a b, cong z a z b; i : cong i x i y, cong i y i z
+ninepoints a b c
+构造X,Y,Z分别是BC,AC,AB的中点，I到X,Y,Z的距离都相等
+
+intersection_cc x o w a
+x : o w a
+o w a = ncoll o w a
+x : cong o a o x, cong w a w x
+circle o o a, circle w w a
+构造X使得OA=OX并且WA=WX{圆O与圆W相交于A, X两点}
+
+intersection_lc x a o b
+x : a o b
+a o b = diff a b, diff o b, nperp b o b a
+x : coll x a b, cong o b o x
+line b a, circle o o b
+构造X使得X在AB上，并且OX=OB{AB与圆O相交, 交点为O和B}
+
+intersection_ll x a b c d
+x : a b c d
+a b c d = npara a b c d, ncoll a b c d
+x : coll x a b, coll x c d
+line a b, line c d
+构造X使得X是AB和CD的交点
+
+intersection_lp x a b c m n
+x : a b c m n
+a b c m n = npara m n a b, ncoll a b c, ncoll c m n
+x : coll x a b, para c x m n
+line a b, pline c m n
+构造CX平行于MN, CX与AB相交于X
+
+intersection_lt x a b c d e
+x : a b c d e
+a b c d e = ncoll a b c, nperp a b d e
+x : coll x a b, perp x c d e
+line a b, tline c d e
+构造CX垂直于DE, CX与AB相交于X
+
+intersection_pp x a b c d e f
+x : a b c d e f
+a b c d e f = diff a d, npara b c e f
+x : para x a b c, para x d e f
+pline a b c, pline d e f
+构造AX平行于BC, DX平行于EF
+
+intersection_tt x a b c d e f
+x : a b c d e f
+a b c d e f = diff a d, npara b c e f
+x : perp x a b c, perp x d e f
+tline a b c, tline d e f
+构造AX垂直于BC, DX垂直于EF
+
+iso_triangle a b c
+c : a b c
+ =
+a : ; b : ; c : eqangle b a b c c b c a, cong a b a c
+isos
+构造等腰三角形ABC使得AB=AC
+
+lc_tangent x a o
+x : x a o
+a o = diff a o
+x : perp a x a o
+tline a a o
+构造X使得AX垂直AO
+
+midpoint x a b
+x : a b
+a b = diff a b
+x : coll x a b, cong x a x b
+midp a b
+构造X作为AB的中点
+
+mirror x a b
+x : a b
+a b = diff a b
+x : coll x a b, cong b a b x
+pmirror a b
+构造X与A关于B对称
+
+nsquare x a b
+x : a b
+a b = diff a b
+x : cong x a a b, perp x a a b
+rotaten90 a b
+构造X使得XAB为等腰直角三角形
+
+on_aline x a b c d e
+x : x a b c d e
+a b c d e = ncoll c d e
+x : eqangle a x a b d c d e
+aline e d c b a
+构造X使得角BAX等于角CDE
+
+on_aline2 x a b c d e
+x : x a b c d e
+a b c d e = ncoll c d e
+x : eqangle x a x b d c d e
+aline2 e d c b a
+构造X使得角BXA等于角CDE
+
+on_bline x a b
+x : x a b
+a b = diff a b
+x : cong x a x b, eqangle a x a b b a b x
+bline a b
+构造X在AB的垂直平分线上
+
+on_circle x o a
+x : x o a
+o a = diff o a
+x : cong o x o a
+circle o o a
+构造X在以O为圆心，OA为半径的圆上
+
+on_line x a b
+x : x a b
+a b = diff a b
+x : coll x a b
+line a b
+构造X在AB上
+
+on_pline x a b c
+x : x a b c
+a b c = diff b c, ncoll a b c
+x : para x a b c
+pline a b c
+构造X使得AX平行于BC
+
+on_tline x a b c
+x : x a b c
+a b c = diff b c
+x : perp x a b c
+tline a b c
+构造X使得AX垂直于BC
+
+orthocenter x a b c
+x : a b c
+a b c = ncoll a b c
+x : perp x a b c, perp x b c a; perp x c a b
+tline a b c, tline b c a
+构造X使得X为ABC的垂心
+
+parallelogram a b c x
+x : a b c
+a b c = ncoll a b c
+x : para a b c x, para a x b c; cong a b c x, cong a x b c
+pline a b c, pline c a b
+构造X使得ABCX为平行四边形
+
+pentagon a b c d e
+
+ =
+a : ; b : ; c : ; d : ; e :
+pentagon
+构造五边形ABCDE
+
+psquare x a b
+x : a b
+a b = diff a b
+x : cong x a a b, perp x a a b
+rotatep90 a b
+构造X使得XAB为等腰直角三角形
+
+quadrangle a b c d
+
+ =
+a : ; b : ; c : ; d :
+quadrangle
+构造四边形ABCD
+
+r_trapezoid a b c d
+d : a b c
+ =
+a : ; b : ; c : ; d : para a b c d, perp a b a d
+r_trapezoid
+构造直角梯形ABCD，使得AB平行CD, AB垂直AD
+
+r_triangle a b c
+c : a b c
+ =
+a : ; b : ; c : perp a b a c
+r_triangle
+构造直角三角形ABC使得AB垂直AC
+
+rectangle a b c d
+c : a b c , d : a b c
+ =
+a : ; b : ; c : perp a b b c ; d : para a b c d, para a d b c; perp a b a d, cong a b c d, cong a d b c, cong a c b d
+rectangle
+构造矩形ABCD
+
+reflect x a b c
+x : a b c
+a b c = diff b c, ncoll a b c
+x : cong b a b x, cong c a c x; perp b c a x
+reflect a b c
+构造X使得X和A关于BC对称
+
+risos a b c
+c : a b
+ =
+a : ; b : ; c : perp a b a c, cong a b a c; eqangle b a b c c b c a
+risos
+构造等腰直角三角形ABC使得AB垂直AC
+
+s_angle a b x y
+x : a b x
+a b = diff a b
+x : s_angle a b x y
+s_angle a b y
+构造X使得角ABX等于Y
+
+segment a b
+
+ =
+a : ; b :
+segment
+构造线段AB
+
+shift x b c d
+x : b c d
+b c d = diff d b
+x : cong x b c d, cong x c b d
+shift d c b
+构造X使得XB=CD且XC=BD
+
+square a b x y
+x : a b, y : a b x
+a b = diff a b
+x : perp a b b x, cong a b b x; y : para a b x y, para a y b x; perp a y y x, cong b x x y, cong x y y a, perp a x b y, cong a x b y
+square a b
+构造XY使得ABXY是正方形
+
+isquare a b c d
+c : a b , d : a b c
+ =
+a : ; b : ; c : perp a b b c, cong a b b c; d : para a b c d, para a d b c; perp a d d c, cong b c c d, cong c d d a, perp a c b d, cong a c b d
+isquare
+构造正方形ABCD
+
+trapezoid a b c d
+d : a b c d
+ =
+a : ; b : ; c : ; d : para a b c d
+trapezoid
+构造梯形ABCD使得AB平行CD
+
+triangle a b c
+
+ =
+a : ; b : ; c :
+triangle
+构造三角形ABC
+
+triangle12 a b c
+c : a b c
+ =
+a : ; b : ; c : rconst a b a c 1 2
+triangle12
+构造三角形ABC使得AB:AC=1:2
+
+2l1c x y z i a b c o
+x : a b c o y z i, y : a b c o x z i, z : a b c o x y i, i : a b c o x y z
+a b c o = cong o a o b, ncoll a b c
+x y z i : coll x a c, coll y b c, cong o a o z, coll i o z, cong i x i y, cong i y i z, perp i x a c, perp i y b c
+2l1c a b c o
+构造圆I与AC,BC和圆O分别相切于X,Y,Z.圆O与AC,BC分别相切于A,B
+
+e5128 x y a b c d
+x : a b c d y, y : a b c d x
+a b c d = cong c b c d, perp b c b a
+x y : cong c b c x, coll y a b, coll x y d, eqangle a b a d x a x y
+e5128 a b c d
+AB是圆C的切线，D在圆C上，构造直线使得经过点D且与AB交于点Y，与圆交于点X，且满足角BAC等于角AXY
+
+3peq x y z a b c
+z : b c z , x : a b c z y, y : a b c z x
+a b c = ncoll a b c
+z : coll z b c ; x y : coll x a b, coll y a c, coll x y z, cong z x z y
+3peq a b c
+构造X,Y,Z分别在三角形ABC的边AB,AC,BC上使得Z是XY的中点
+
+trisect x y a b c
+x : a b c y, y : a b c x
+a b c = ncoll a b c
+x y : coll x a c, coll y a c, eqangle b a b x b x b y, eqangle b x b y b y b c
+trisect a b c
+构造X,Y在AC上使得BX，BY三等分角ABC
+
+trisegment x y a b
+x : a b y, y : a b x
+a b = diff a b
+x y : coll x a b, coll y a b, cong x a x y, cong y x y b
+trisegment a b
+构造X,Y在线段AB上使得AX=XY=YB
+
+on_dia x a b
+x : x a b
+a b = diff a b
+x : perp x a x b
+dia a b
+构造X在以AB为直径的圆上
+
+ieq_triangle a b c
+c : a b
+ =
+a : ; b : ; c : cong a b b c, cong b c c a; eqangle a b a c c a c b, eqangle c a c b b c b a
+ieq_triangle
+构造等边三角形ABC
+
+on_opline x a b
+x : x a b
+a b = diff a b
+x : coll x a b
+on_opline a b
+构造点X在AB上
+
+cc_tangent0 x y o a w b
+x : o a w b y, y : o a w b x
+o a w b = diff o a, diff w b, diff o w
+x y : cong o x o a, cong w y w b, perp x o x y, perp y w y x
+cc_tangent0 o a w b
+构造圆(O, A)和圆(W, B)的公切线，切点分别为X和Y
+
+cc_tangent x y z i o a w b
+x : o a w b y, y : o a w b x, z : o a w b i, i : o a w b z
+o a w b = diff o a, diff w b, diff o w
+x y : cong o x o a, cong w y w b, perp x o x y, perp y w y x; z i : cong o z o a, cong w i w b, perp z o z i, perp i w i z
+cc_tangent o a w b
+构造圆(O, A)和(W, B)的两条公切线，其中(X, Y)是一条切线的切点，(Z, I)是另一条切线的切点
+
+eqangle3 x a b d e f
+x : x a b d e f
+a b d e f = ncoll d e f, diff a b, diff d e, diff e f
+x : eqangle x a x b d e d f
+eqangle3 a b d e f
+构造X使得角AXB=角EDF
+
+tangent x y a o b
+x y : o a b
+a o b = diff o a, diff o b, diff a b
+x : cong o x o b, perp a x o x; y : cong o y o b, perp a y o y
+tangent a o b
+构造X,Y作为过A点与圆O相切的切点，圆O的半径OB
+
+on_circum x a b c
+x : a b c
+a b c = ncoll a b c
+x : cyclic a b c x
+cyclic a b c
+构造X使得XABC四点共圆
