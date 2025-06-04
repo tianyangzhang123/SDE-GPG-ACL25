@@ -1,0 +1,1 @@
+a b = segment a b; c = nsquare c b a; d = psquare d a b; e = on_line e b d; f = foot f e b c; g = foot g e d c ? cong e a g f

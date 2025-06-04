@@ -1,0 +1,120 @@
+a b c = triangle a b c; d e = square a c d e; g f = square c b g f ? perp d b f a
+c a = segment c a; b = on_tline b c c a; d = foot d c a b ? eqangle a c a d c b c d
+a b c d = isquare a b c d; e = on_line e b d, on_circle e b c; f = on_tline f e b d, on_line f d c ? cong e d c f
+a b c d = trapezoid a b c d; e = midpoint e d a; f = on_pline f e a b, on_line f b c ? midp f b c
+c a b = r_triangle c a b; f e = square a b f e; p = on_line p b e, on_line p a f ? eqangle c a c p c p c b
+b c a = triangle b c a; d = lc_tangent d c a, lc_tangent d b a; e = on_circle e a c, on_dia e a d ? eqangle b e b a b a b c
+a b c = triangle a b c; d = eq_triangle d c a; e = eq_triangle e b a ? cong d e c b
+c a b = r_triangle c a b; d = midpoint d b c; e = foot e c a d ? eqangle a b b c d e e b
+a b c = triangle a b c; d = intersection_pp d a b c c a b; e = intersection_ll e a c b d ? cong a e e c
+a b c d = isquare a b c d; e = s_angle c d e 15, s_angle d c e -15; f = reflect f e a c ? contri e a b a b e
+a b c = triangle a b c; d = angle_bisector d a b c, on_dia d b c; e = angle_bisector e b a c, on_dia e a c ? para d e a b
+a b c = triangle a b c; i = incenter i a b c; e = on_pline e i a b, on_line e a c ? cong e i e a
+a b c = triangle a b c; m = midpoint m b a; o = circle o a b c; n = on_line n o m, on_circle n o a ? eqangle c a c n c n c b
+o a = segment o a; p = on_circle p a o; q = intersection_cc q a o p; r = lc_tangent r p a, on_circle r o p ? cong p q p r
+m a b = iso_triangle m a b; o = circle o a b m; d = on_line d m o, on_line d a b; e = on_tline e a a o, on_pline e m a o ? cong m e m d
+e c d = r_triangle e c d; o = midpoint o d c; a = on_tline a c c d, on_tline a e e o; f = on_line f c a, on_line f d e ? cong a e a f
+a b = segment a b; c = on_circle c a b; d = on_circle d a b; e = on_circle e a b, on_pline e d b c ? cong d c e b
+a b c = triangle a b c; d = on_circle d a b, on_circle d c b; e = on_line e d a, on_circle e a d; f = on_line f d c, on_circle f c d ? coll e b f
+a b = segment a b; c = on_bline c a b; d = on_bline d a b; e = on_line e c d, on_line e a b ? cong a e e b
+a b = segment a b; c = on_bline c a b; d = on_line d a c; e = on_circle e c d, on_line e b c ? cong a e b d
+a b c = triangle a b c; d = foot d b a c; e = foot e a b c; f = foot f b d e ? eqangle b a b d b c b f
+a b c = triangle a b c; d = midpoint d c b; e = foot e b a c; f = foot f c a b ? eqangle a b a c e f e d
+a b c = triangle a b c; e = on_line e a b, on_circle e a c; d = angle_bisector d b a c, on_line d b c; f = on_pline f e b c, on_line f a c ? eqangle e d e c e c e f
+a b c = triangle a b c; e = circumcenter e a b c; d = on_line d a b, angle_bisector d a c b; f = on_tline f c c e, on_pline f d a c ? cong c f d b
+d a b = r_triangle d a b; c = midpoint c b a; e = circle e a c d; f = circle f b d c ? perp e d d f
+a b c = triangle a b c; d = circumcenter d a c b; e = on_line e b c; f = on_circle f d a, angle_bisector f a c e ? cong a f f b
+a b c = triangle a b c; d = eq_triangle d a b; e = eq_triangle e a c; f = eq_triangle f c b ? para e d c f
+a b c = triangle a b c; d = foot d a b c; e = circumcenter e b a c; f = angle_bisector f b a c, on_circle f e a ? eqangle e a a f f a a d
+a b c = triangle a b c; d = eq_triangle d a b; e = eq_triangle e a c; f = parallelogram c e d f ? cong b f f c
+c a b = r_triangle c a b; d = midpoint d c a; f = midpoint f c b; e = on_line e a b, on_circle e d c ? perp d e e f
+a b c = triangle a b c; d = parallelogram a b c d; e = eq_triangle e a b; f = eq_triangle f b c ? cong d e d f
+c a b = risos c a b; e = midpoint e b a; d = on_line d a b, on_circle d b c; f = on_line f a c, on_circle f c e ? perp a c f d
+c a b = iso_triangle c a b; d = on_line d b c; e = circle e a b d; f = on_circle f e a, on_line f a c ? para a b f d
+c a b = iso_triangle c a b; d = foot d a b c; e = foot e b a c; f = on_line f a d, on_line f b e ? cong f a f b
+a b c d = trapezoid a b c d; e = midpoint e c a; f = midpoint f d b; g = on_line g e f, on_line g a d ? midp g a d
+a b c d = rectangle a b c d; e = on_line e b d, on_line e a c; f = midpoint f e d; g = midpoint g e a ? cong f c g b
+a b c d = quadrangle a b c d; e = on_line e a c; g = on_pline g e a b, on_line g b c; f = on_pline f e a d, on_line f c d ? para b d g f
+a b c = triangle a b c; o = circle o a b c; d = on_tline d b a c, on_circle d o a; e = on_circle e o d, on_line e d o ? para b e a c
+a b c = triangle a b c; d = foot d a b c; q = foot q d a b; p = foot p d a c ? cyclic b q p c
+a b = segment a b; c = midpoint c a b; d = on_circle d c a; e = lc_tangent e d c, angle_mirror e b a d ? perp a e e d
+a b = segment a b; c = on_circle c a b; e = intersection_lc e a a c; d = on_tline d c a c, on_tline d b a b ? para a d b e
+a b = segment a b; c = s_angle b a c 30; d = mirror d b c; e = foot e d a b ? cong d e a c
+a b c = triangle a b c; d = on_line d b c, angle_bisector d b a c; e = on_pline e d a c, on_line e a b; f = on_pline f e b c, on_line f a c ? cong e a f c
+a b = segment a b; c = midpoint c b a; d = s_angle b a d 30, on_circle d c a; e = lc_tangent e d c, on_line e a b ? cong d a d e
+a b c d = isquare a b c d; e = midpoint e b a; f = on_line f a b; g = on_tline g e d e, angle_bisector g c b f ? cong d e e g
+a b c = triangle a b c; d = midpoint d c a; e = angle_bisector e b a d, on_line e b d; f = on_pline f b c e, on_line f a c ? cong b a c f
+c a b = triangle a b c; d = angle_bisector d b a c; e = foot e c a d; f = intersection_lp f a c e a b ? cong f e f c
+b c d = triangle b c d; e = midpoint e c d; a = eqdistance a d c b, on_pline a b d c; f = midpoint f b a ? perp a b e f
+d b a = triangle d b a; c = angle_bisector c d a b, angle_bisector c d b a; e = on_line e b c, on_tline e d b c; f = on_line f a c, on_tline f d a c ? para e f a b
+a b c = triangle a b c; o = circle o a b c; u = angle_bisector u b a c, on_line u b c; t = on_tline t a a o, on_line t b c ? cong t a t u
+a b c = triangle a b c; d = midpoint d a b; e = midpoint e c a; f = on_line f d e, angle_bisector f c b a ? perp a f b f
+a b c = triangle a b c; d = angle_bisector d a c b, on_line d a b; e = on_pline e d b c, on_line e a c; f = on_pline f e a b, on_line f b c ? cong c e f b
+a b c = triangle a b c; d = angle_bisector d b a c, on_line d b c; f = on_line f b c, on_bline f a d; e = on_bline e a d, on_line e a d ? eqangle a b a f c f c a
+a b c = triangle a b c; d = midpoint d b a; e = angle_bisector e c d a, on_line e a c; f = angle_bisector f c d b, on_line f c b ? para e f a b
+a c d = triangle a c d; b = on_pline b c d a, on_pline b a d c; e = on_line e a c; f = shift f c a e ? para d e f b
+c d b = triangle c d b; e = midpoint e c d; a = eqdistance a d c b, on_pline a b d c; f = midpoint f b a ? perp a b e f
+b c = segment b c; a = on_tline a b b c; d = on_circle d c b; e g = e5128 e g a b c d ? cong a g g b
+a b c = triangle a b c; o = circle o a b c; h = midpoint h c b; d = on_line d o h, on_line d a b; e = on_tline e c c o, on_tline e a a o ? cyclic a o e d
+a b c = triangle a b c; h = orthocenter h a b c; o = circle o a b c; c1 = on_circle c1 o c, on_line c1 c h; a1 = on_circle a1 o a, on_line a1 a h ? cong b a1 b c1
+p a b = triangle p a b; o = midpoint o b a; a1 = on_line a1 p a, on_circle a1 o a; b1 = on_line b1 p b, on_circle b1 o a; o1 = circle o1 p a1 b1 ? perp o a1 a1 o1
+a o = segment a o; b = on_circle b o a; c = on_line c a b; e = intersection_tt e b b o c c o; d = intersection_lt d c e a a o ? cong o e o d
+a b c = triangle a b c; d = midpoint d a c; e = midpoint e b a; f = midpoint f c b; g = on_pline g d a f, on_pline g f a c ? para c e g b
+a b c = triangle a b c; d = circumcenter d b a c; e = on_line e a c, angle_bisector e c b a; f = intersection_lc f e d b; g = on_tline g f d f ? para f g a c
+a b c = triangle a b c; d = midpoint d c b; e = midpoint e a c; f = midpoint f b a; g = foot g a b c ? eqangle d f d e g f g e
+a b c = triangle a b c; d = foot d c a b; e = foot e b a c; f = midpoint f c b; g = midpoint g d e ? perp f g d e
+a b c = triangle a b c; d = midpoint d b c; e = midpoint e c a; f = midpoint f b a; g = parallelogram d a e g ? cong c f g b
+a b c = triangle a b c; d = foot d c a b; e = on_tline e a b c, on_line e c d; f = midpoint f a e; g = midpoint g c b ? perp d g d f
+a b = segment a b; d = midpoint d b a; c = on_circle c b a, on_circle c a b; e = on_line e a c, on_circle e d a; f = on_circle f d a, on_line f b c ? cong a e e f
+a b = segment a b; c = on_bline c a b; e = midpoint e a c; d = on_circle d a c, on_line d a c; f = midpoint f b d ? cong b e b f
+a b c = triangle a b c; a1 = midpoint a1 c b; b1 = midpoint b1 c a; c1 = midpoint c1 b a; o = circle o a b c ? perp o a1 b1 c1
+a c = segment a c; b = eq_triangle b c a; e = mirror e c b; d = mirror d b e; f = foot f d a b ? perp a c c f
+a b = segment a b; c = on_circle c a b; e = on_circle e a b; d = on_circle d a b, on_circle d b c; f = on_circle f b c, on_line f c e ? cong e d e f
+c a = segment c a; b = eq_triangle b c a; d = circumcenter d c a b; e = on_pline e d a c, on_line e a b; f = on_pline f d b c, on_line f a b ? cong a e e f
+a c = segment a c; b = on_tline b c a c; d = on_dia d b a, on_circle d a c; e = on_line e b c, on_circle e a b; f = on_line f b d, on_circle f a b ? para c d e f
+a b = segment a b; c = on_circle c a b; d = on_circle d a b, on_circle d c b; e = mirror e d c; f = on_circle f a b, on_line f b e ? coll d a f
+a b = segment a b; c = on_circle c a b; d = on_circle d a b; e = circle e c a d; f = on_line f b c, on_circle f e a ? cong d f f b
+a b = segment a b; c = on_bline c a b; d = on_line d a c; e = on_circle e c d, on_line e b c; f = on_line f b d, on_line f a e ? eqangle a c c f f c c b
+c a b = risos c a b; d = midpoint d b a; e = on_line e b c; f = circle f d b e; g = on_line g a e, on_circle g f b ? perp c g a e
+a b c = triangle a b c; d = circumcenter d a b c; f = foot f d a b; e = on_tline e c c d, on_tline e b b d; g = on_line g d f, on_line g a c ? para g e a b
+a b c = triangle a b c; e = on_line e a b; d = circle d a b c; f = on_circle f d a, on_aline f c b a c e; g = on_circle g d c, on_line g c e ? para a b g f
+a b c = triangle a b c; d = circle d a b c; e = on_circle e d a; f = foot f e a c; g = foot g e a b ? simtri e f g e c b
+c a b = r_triangle c a b; d = foot d c a b; e = angle_bisector e c a b, on_line e b c; g = foot g e a b; f = on_line f c d, on_line f a e ? cong c e c f
+a b c = triangle a b c; d = circle d c a b; e = circle e c d b; f = on_line f a b, on_circle f e b; g = on_line g a c, on_circle g e b ? cong g b g a
+a b c = triangle a b c; o = circle o a b c; d = on_tline d b a c, on_circle d o a; f = midpoint f b a; e = on_line e a c, on_line e b d ? perp f e c d
+a b c = triangle a b c; m = free m; n = on_aline n a c b a m; q = foot q m a b; p = foot p m a c ? perp a n p q
+a b c = triangle a b c; i = incenter i a b c; y = foot y i a c; l = foot l i b c; x = foot x b a i ? coll x y l
+a b c = triangle a b c; o = circle o a b c; d = on_circle d o a; a1 = on_tline a1 a a b, on_line a1 c d; c1 = on_tline c1 c c d, on_line c1 a b ? para d b a1 c1
+a b = segment a b; d = midpoint d a b; c = on_tline c b a b; e = on_line e a c, on_circle e d b; f = lc_tangent f e d, on_line f b c ? cong f c f b
+a b = segment a b; c = on_circle c a b; d = on_line d a c; e = on_line e a b, on_circle e a d; f = on_line f b d, on_line f c e ? eqangle a b a f a f a c
+a b c = triangle a b c; d = foot d a b c; e = foot e b a c; h = on_line h a d, on_line h b e; g = foot g h a b ? eqangle g e g h g h g d
+a b c = triangle a b c; d = foot d a b c; o = midpoint o a d; e = on_line e a b, on_circle e o d; f = on_line f a c, on_circle f o d ? cyclic b c e f
+a b c = triangle a b c; e d = square b a e d; f g = square a c f g; h = on_line h b e, on_line h a d; i = on_pline i e a g, on_pline i g a e ? perp c h h i
+a b c d = isquare a b c d; e = on_line e b c; g = on_line g d c, on_line g a e; f = on_line f b d, on_line f a e; h = circle h g e c ? perp f c c h
+b a c = triangle b a c; d = foot d b a c; e = foot e c a b; f = midpoint f c b; g = foot g f d e ? cong g e g d
+a b c = triangle a b c; d = circle d a b c; e = on_circle e d a; f = on_line f a b, on_line f c e; g = on_pline g f a e, on_line g b c ? eqangle f g f b c f c b
+a b c = triangle a b c; e = midpoint e b a; d = circle d a b c; f = on_line f d e; g = on_line g b c, on_circle g f a ? simtri a d f a c g
+c a b = iso_triangle c a b; e = midpoint e b c; f = on_line f a b, on_circle f e b; d x = trisegment d x c b; g = on_line g c f, on_line g a d ? cong c g g f
+c a b = iso_triangle c a b; d = on_line d a c; e = on_line e b c, eqdistance e b d a; f = on_line f a b, on_line f d e; g = on_pline g f a c, on_line g b c ? midp f d e
+a b c = triangle a b c; d = angle_bisector d b a c; e = on_pline e c b d, on_pline e b c d; f = on_line f b e, on_line f a c; g = on_line g c e, on_line g a b ? cong b g c f
+a b c = triangle a b c; d = parallelogram a b c d; e = on_line e c d; f = on_line f a d, eqdistance f c a e; g = on_line g a e, on_line g c f ? eqangle g a g b g b g c
+c a b = r_triangle c a b; d = foot d c a b; e = on_line e c d, angle_bisector e b a c; f = on_line f a b, angle_bisector f d c b; g = on_line g b c, on_line g a e ? para e f c b
+a b = segment a b; c = on_dia c a b, on_bline c a b; d = midpoint d a c; e = foot e c b d; f = on_line f c e, on_line f a b ? eqangle d c d b d f d a
+a b c = triangle a b c; e = on_line e a b; f = on_pline f e b c, on_line f a c; d = circle d a b c; g = circle g a e f ? coll a g d
+a b c = triangle a b c; e = on_line e a b; f = intersection_lp f a c e c b; d = circle d a b c; g = circle g a e f ? coll a g d
+a b c d = isquare a b c d; e = mirror e a b; f = midpoint f b a; g = on_tline g f d f, angle_bisector g c b e; h = foot h g a b ? cong d f g f
+a b = segment a b; c = on_bline c a b; e = midpoint e a c; d = mirror d c a; f = midpoint f b d ? cong e b f b
+c a b = risos c a b; d = midpoint d b a; e = on_line e a b; f = foot f e a c; g = foot g e b c ? cong d f d g
+a b c = triangle a b c; d = on_line d a c, angle_bisector d c b a; e = on_line e a b, angle_bisector e b c a; f = foot f a c e; g = foot g a b d ? para g f b c
+a b = segment a b; c = on_bline c a b; e = midpoint e a c; f = mirror f b e; d = on_circle d a c, on_line d a c ? cong f b b d
+a b c = triangle a b c; d = on_line d a b; e = on_pline e d b c, on_line e a c; f = on_line f c d, on_line f b e; g = on_line g a f, on_line g b c ? midp g b c
+a b c = triangle a b c; o = circle o a b c; e = on_pline e a b c, on_circle e o a; f = foot f e a b; g = foot g e a c ? para f g a o
+a b c = triangle a b c; f = free f; p = circle p a b f; o = circle o a b c; e = on_circle e p a, on_line e a c; d = on_circle d o b, on_line d b f ? para c d e f
+a b c = triangle a b c; g = foot g c a b; o = circle o a b c; d = on_circle d o c, on_line d c g; e = foot e d a c; f = foot f d b c ? cyclic a e f b
+m b c = triangle m b c; i = incenter i m b c; i_b = on_tline i_b c c i, on_line i_b b i; i_c = on_tline i_c b b i, on_line i_c c i; a = midpoint a i_b i_c; o = circumcenter o b i c ? perp a b b o
+b c r = triangle b c r; o = circle o b c r; s = on_circle s o b; a = on_line a b r, on_line a c s; m = foot m a r s; n = foot n a b c ? eqangle a b a m a n a c
+a b = segment a b; c = midpoint c b a; d = on_tline d b a b; e = on_line e a d, on_circle e c a; f = on_pline f e a b, on_circle f c e; g = foot g d a f ? cong a f f g
+a b = segment a b; c = midpoint c b a; d = on_circle d c a; e = on_line e b d; f = circle f d c e; g = on_pline g e a b, on_circle g f c ? cong g e c b
+a b = segment a b; c = midpoint c b a; d = on_circle d c b; e = foot e d a b; f = lc_tangent f d c; g = on_line g d f ? eqangle d f d a d a d e
+a b = segment a b; c = midpoint c b a; d = mirror d c b; e = on_circle e c a, on_circle e b c; f = on_tline f b a b, on_line f a e; g = on_line g b f, on_line g d e ? cong e g g f
+a b = segment a b; c = nsquare c b a; d = psquare d a b; e = on_line e b d; f = foot f e b c; g = foot g e d c ? cong e a g f
